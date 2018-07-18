@@ -3,7 +3,8 @@
 A Socket.io Chat Example Using TypeScript
 =========================================
 
-This repository contains server & client side code using `TypeScript` language
+This repository contains server & client side code using `TypeScript` language. SpringBoot Application for Rest Services to save and retrieve chats. 
+Firebase for authentication and database 
 
 
 # Running Server and Client locally
@@ -56,6 +57,10 @@ Now open your browser in following URL: [http://localhost:4200](http://localhost
 
 ## Run SpringBoot App
 
+Open other command line window and run following commands:
+
+```bash
 $ cd tebogochat
 $ mvn spring-boot:run
+```
 
