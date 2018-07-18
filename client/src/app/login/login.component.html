@@ -1,0 +1,31 @@
+<div class="signin-content">
+  <mat-card>
+    <mat-card-header>
+      <img mat-card-avatar src="../../assets/images/App-login-manager-icon.png">
+      <mat-card-title>Please login to continue</mat-card-title>
+      <!-- <mat-card-subtitle>Trust us for your data, and sign up</mat-card-subtitle> -->
+    </mat-card-header>
+    <mat-card-content>
+      <form id="loginForm" [formGroup]="form">
+        <mat-form-field class="full-width-input">
+          <input matInput placeholder="Email" formControlName="email" required>
+          <mat-error *ngIf="isFieldInvalid('email')">
+            Please input a username
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width-input">
+          <input matInput type="password" placeholder="Password" formControlName="password" required>
+          <mat-error *ngIf="isFieldInvalid('password')">
+            Please input password
+          </mat-error>
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+        <button class="twitter-button" mat-raised-button  [disabled]="!form.valid" (click)="login('login')"><span class="fa fa-sign-in"></span></button>
+        <button class="twitter-button" mat-raised-button  [disabled]="form.valid" (click)="login('twitter')"><span class="fa fa-twitter"></span></button>
+        <button class="facebook-button" mat-raised-button  [disabled]="form.valid" (click)="login('facebook')" ><span class="fa fa-facebook"></span></button>
+        <button class="google-button" mat-raised-button  [disabled]="form.valid" (click)="login('google')"><span class="fa fa-google"></span></button>
+      </mat-card-actions>
+  </mat-card>
+</div>

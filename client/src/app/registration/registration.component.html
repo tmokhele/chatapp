@@ -1,0 +1,47 @@
+﻿<div class="signin-content" style="margin-top:100px;">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-lg-4 col-sm-4 center-block ">
+      <mat-card>
+        <mat-card-header>
+          <img mat-card-avatar src="../../assets/images/App-login-manager-icon.png">
+          <mat-card-title>Sign Up</mat-card-title>
+          <!-- <mat-card-subtitle>Trust us for your data, and sign up</mat-card-subtitle> -->
+        </mat-card-header>
+        <mat-card-content>
+          <form [formGroup]="form" (ngSubmit)="register(user)">
+            <mat-form-field class="full-width-input">
+              <input matInput placeholder="User Name" [(ngModel)]="user.username" formControlName="username" required>
+              <mat-error *ngIf="isFieldInvalid('username')">
+                Please input a username
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field class="full-width-input">
+              <input matInput type="email" placeholder="Email" [(ngModel)]="user.email" formControlName="email" required>
+              <mat-error *ngIf="isFieldInvalid('email')">
+                Please input email
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field class="full-width-input">
+              <input matInput type="password" placeholder="Password" [(ngModel)]="user.password" formControlName="password" required>
+              <mat-error *ngIf="isFieldInvalid('password')">
+                Please input password
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field class="full-width-input">
+              <input matInput type="password" placeholder="Confirm Password" formControlName="confirmPassword" required>
+              <mat-error *ngIf="form.controls.confirmPassword.touched && form.hasError('mismatchedPasswords') && form.controls.password.valid">
+                Passwords do not match
+              </mat-error>
+            </mat-form-field>
+            </form>
+        </mat-card-content>
+        <mat-card-actions>
+          <button class="register-button" btn-block mat-raised-button [disabled]="!form.valid" (click)="register()">
+            <span class="fa fa-user-plus"></span> Submit
+          </button>
+          
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

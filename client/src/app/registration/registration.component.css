@@ -1,0 +1,20 @@
+﻿.validate {
+  background-color: #ef5d84;
+}
+mat-card {
+  max-width: 400px;
+  margin: 2em auto;
+  text-align: center;
+}
+.signin-content {
+  padding: 60px 1rem;
+}
+.full-width-input {
+  width: 100%;
+}
+
+.register-button {
+  background-color:rgb(79, 230, 49) ;
+  color: white;
+  border-radius: 8px;
+}
