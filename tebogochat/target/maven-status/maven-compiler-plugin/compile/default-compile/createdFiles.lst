@@ -1,0 +1,4 @@
+tebogo\chat\controller\ChatApplicationController.class
+tebogo\chat\tebogo\chat\model\Chat.class
+tebogo\chat\config\FirebaseConfig.class
+tebogo\chat\app\ChatClientApplication.class
